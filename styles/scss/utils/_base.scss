@@ -1,0 +1,15 @@
+button, a {
+  transition-duration: 0.3s;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--color-dark);
+  @include fluid-text(13, 9);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}

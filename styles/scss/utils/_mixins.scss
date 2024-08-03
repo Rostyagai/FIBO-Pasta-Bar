@@ -1,0 +1,94 @@
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px, calc(#{$max} / 1440 * 100vw), #{$max}px);
+}
+
+@mixin reset-link {
+  color: inherit;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+  @content;
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+@mixin abs-center-x {
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  aspect-ratio: 1;
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  overflow: hidden !important;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}@mixin hover-underline($color: var(--color-accent)) {
+  position: relative;
+  &::after {
+    @include abs-center-x;
+
+    content: "";
+    position: absolute;
+    background-color: #{$color};
+    width: 0px;
+    height: 3px;
+    bottom: -5px;
+    transition: var(--transition-duration);
+  }
+
+  @include hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
