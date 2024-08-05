@@ -1,0 +1,11 @@
+.banner-section{
+    padding-top: 170px;
+    padding-bottom: 38px;
+
+    @include tablet{
+        padding-top: 100px;
+    }
+    @include mobile{
+        padding-top: 80px;
+    }
+}

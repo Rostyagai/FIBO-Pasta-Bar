@@ -1,0 +1,59 @@
+.banner-slider {
+  position: relative;
+  width: 100%;
+
+  .swiper-wrapper {
+    align-items: center;
+  }
+
+  &__slide {
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.26);
+
+    @include desktop-above {
+      &.swiper-slide-prev,
+      &:not(.swiper-slide-active):not(.swiper-slide-next) {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__img img {
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+  &__button {
+    --buttonSize: 31px;
+    --navButtonOffset: calc(-60px - var(--buttonSize));
+
+    @include square(var(--buttonSize));
+    @include flex-center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    fill: var(--color-dark-alt);
+    transition: var(--transition-duration);
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    @include desktop {
+      --navButtonOffset: 15px;
+    }
+
+    &.next {
+      right: var(--navButtonOffset);
+    }
+    &.prev {
+      left: var(--navButtonOffset);
+    }
+  }
+}
