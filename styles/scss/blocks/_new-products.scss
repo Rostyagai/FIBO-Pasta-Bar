@@ -1,0 +1,115 @@
+.new-products {
+  position: relative;
+  @include tablet-above {
+    padding-top: 38px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 5px;
+
+    @include mobile {
+      row-gap: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+
+    @include mobile {
+      font-size: 19px;
+    }
+  }
+  &__list {
+    width: 100%;
+    padding-block: 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start;
+
+    @include mobile {
+      column-gap: 14px;
+      padding-block: 20px;
+    }
+  }
+  &__product {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+
+    padding: 14px 35px 14px 17px;
+    border-radius: var(--border-radius-smaller);
+    background-color: var(--color-light);
+
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.06);
+
+    @include hover{
+        opacity: 0.5;
+    }
+
+    @include tablet {
+      column-gap: 14px;
+      padding: 11px 35px 11px 14px;
+    }
+    @include mobile {
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    &-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      @include tablet {
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+    }
+    &-price {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--color-accent);
+      white-space: nowrap;
+      @include tablet {
+        font-size: 13px;
+      }
+    }
+    &-img {
+      @include square(71px);
+
+      @include tablet {
+        @include square(56px);
+      }
+    }
+  }
+
+  &__illustration {
+    width: 148px;
+    height: 445px;
+    top: 20px;
+
+    @include desktop {
+      top: -20px;
+      opacity: 0.3;
+    }
+    @include tablet {
+      top: -45px;
+      width: 142px;
+      height: auto;
+      left: -14px;
+    }
+    @include mobile {
+      top: 10px;
+      width: 54px;
+      left: 0;
+    }
+  }
+}
