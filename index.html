@@ -13,7 +13,7 @@
     <title>FIBO Pasta Bar</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header-main">
       <div class="container">
         <div class="header__inner">
           <div class="header__top">
@@ -62,7 +62,9 @@
               </div>
             </div>
             <address class="header__top-address">
-              <button class="header__top-button button">Заказать звонок</button>
+              <button class="header__top-button button" type="button">
+                Заказать звонок
+              </button>
               <a class="header__top-phone header__phone" href="tel:84993918449"
                 >8 499 391-84-49</a
               >
@@ -107,17 +109,22 @@
               </ul>
               <a class="header__login-button" href="/">Войти</a>
             </div>
-            <button class="header__cart-button button">
+            <button class="header__cart-button button" type="button">
               <span class="header__cart-button-text">Корзина</span>
               <span class="header__cart-button-count">1</span>
             </button>
           </div>
-          <button class="header__burger-button button visible-tablet"></button>
+          <button
+            class="header__burger-button button visible-tablet"
+            id="open-nav-button"
+          ></button>
         </div>
       </div>
     </header>
     <main>
+      <h1 class="visually-hidden">FIBO Pasta Bar -  Главная</h1>
       <section class="banner-section x-hidden">
+        <h2 class="visually-hidden">Наши акции / реклама</h2>
         <div class="container">
           <div class="banner-slider">
             <div class="swiper-wrapper">
@@ -183,23 +190,84 @@
               </div>
             </div>
 
-            <div class="banner-slider__button next button" id="banner-slider-next-btn">
+            <div
+              class="banner-slider__button next button"
+              id="banner-slider-next-btn"
+            >
               <svg width="12" height="15">
                 <use href="./images/icons/icons.svg#icon-right-arrow"></use>
               </svg>
             </div>
-            <div class="banner-slider__button prev button" id="banner-slider-prev-btn">
+            <div
+              class="banner-slider__button prev button"
+              id="banner-slider-prev-btn"
+            >
               <svg width="12" height="15">
                 <use href="./images/icons/icons.svg#icon-left-arrow"></use>
               </svg>
-      
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer></footer>
-    <script src="./libs/swiper-bundle.min.js"></script>
-    <script src="./js/banner-slider.js"></script>
+    <div class="mobile-nav" id="mobile-navigation">
+      <div class="container">
+        <div class="mobile-nav__inner">
+          <nav class="mobile-nav__nav">
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Пицца</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Паста</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Супы</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Салаты</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Напитки</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Десерты</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Бакалея</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Антипасты</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Акции</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Комбо</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="mobile-nav__login-button" href="/">Войти</a>
+          <a class="mobile-nav__phone header__phone" href="tel:84993918449">
+            8 499 391-84-49
+          </a>
+          <button
+            class="mobile-nav__cart-button header__cart-button header__cart-button--light button"
+            type="button"
+          >
+            <span class="header__cart-button-text">Корзина</span>
+            <span class="header__cart-button-count">1</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/fixed-header.js" defer></script>
+    <script src="./js/mobile-nav.js" defer></script>
+    <script src="./libs/swiper-bundle.min.js" defer></script>
+    <script src="./js/banner-slider.js" defer></script>
   </body>
 </html>

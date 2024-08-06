@@ -10,11 +10,15 @@
     border-radius: 13px;
     overflow: hidden;
     box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.26);
+    max-height: 317px;
+    transition: var(--transition-duration) all;
 
     @include desktop-above {
       &.swiper-slide-prev,
       &:not(.swiper-slide-active):not(.swiper-slide-next) {
+        max-height: 270px;
         opacity: 0.5;
+        transition: var(--transition-duration) all;
       }
     }
   }

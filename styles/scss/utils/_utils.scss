@@ -6,3 +6,7 @@
 .x-hidden{
   overflow-x: hidden;
 }
+
+.visually-hidden {
+  @include visually-hidden;
+}
