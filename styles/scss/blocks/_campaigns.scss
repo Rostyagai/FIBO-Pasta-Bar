@@ -1,0 +1,129 @@
+.campaigns {
+  position: relative;
+  padding: 32px 0 62px;
+
+  @include tablet {
+    padding: 8px 0 50px;
+  }
+  @include tablet {
+    padding: 4px 0 36px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 44px;
+    color: var(--color-dark-alt-2);
+    text-align: center;
+    margin-bottom: 47px;
+
+    & .accent {
+      color: var(--color-accent);
+    }
+
+    @include tablet {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 29px;
+    row-gap: 27px;
+    margin-bottom: 49px;
+
+    @include tablet {
+      column-gap: 19px;
+      row-gap: 17px;
+      margin-bottom: 40px;
+    }
+    @include mobile {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    &:first-child {
+      @include mobile-above {
+        grid-row: 1 / 3;
+      }
+
+      @include mobile {
+        grid-column: 1 / 3;
+      }
+    }
+  }
+  &__image {
+    position: relative;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: var(--border-radius-large);
+    transition: var(--transition-duration) box-shadow;
+
+    & img {
+      transition: var(--transition-duration) scale;
+    }
+
+    @include hover {
+      & img {
+        scale: 1.05;
+      }
+
+      box-shadow: 0 0 20px -10px var(--color-gray-dark);
+    }
+
+    @include mobile {
+      border-radius: var(--border-radius-small);
+    }
+  }
+  &__button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 200%;
+    color: var(--color-light);
+
+    background-color: var(--color-accent);
+    border-radius: var(--button-border-radius-large);
+    padding: var(--button-padding-y-extra-large) var(--button-padding-x-large);
+
+    margin: 0 auto;
+
+    @include hover {
+      color: var(--color-accent);
+      background-color: var(--color-dark-alt-2);
+    }
+
+    @include tablet {
+      color: var(--color-dark-alt);
+    }
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 280%;
+      padding-block: 0;
+      padding-inline: var(--button-padding-x);
+    }
+  }
+  &__illustration {
+    width: 220px;
+    height: 335px;
+    bottom: 0;
+    right: 0;
+
+    @include tablet {
+      width: 71px;
+      height: 128px;
+    }
+    @include mobile {
+      width: 58px;
+      height: 89px;
+      bottom: -10px;
+    }
+  }
+}
