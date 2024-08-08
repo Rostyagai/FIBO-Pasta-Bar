@@ -25,6 +25,6 @@ const bannerSlider = new Swiper(".banner-slider", {
     }
   },
   autoplay: {
-    delay: 3000,
+    delay: 7000,
   },
 });
