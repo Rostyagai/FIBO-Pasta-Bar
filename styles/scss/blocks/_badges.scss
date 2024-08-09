@@ -1,0 +1,58 @@
+.badges {
+  --badgeCardBackground: var(--color-light);
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  margin-bottom: 32px;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 58px;
+    margin-bottom: 50px;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+    row-gap: 43px;
+    margin-bottom: 26px;
+  }
+  &__item {
+    position: relative;
+    padding: 43px 19px 28px;
+    background-color: var(--badgeCardBackground);
+    border-radius: var(--border-radius);
+
+
+    @include tablet {
+      padding-bottom: 24px;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+    @include mobile {
+      padding-bottom: 16px;
+      max-width: 260px;
+    }
+  }
+  &__badge {
+    @include flex-center;
+    @include square(77px);
+    @include abs-center-x;
+
+    top: 5px;
+
+    padding: 16px;
+    border-radius: 50%;
+    background-color: var(--badgeCardBackground);
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    color: var(--color-gray-dark-alt-2);
+    text-align: center;
+
+    @include mobile{
+        font-size: 12px;
+    }
+  }
+}

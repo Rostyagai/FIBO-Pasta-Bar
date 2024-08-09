@@ -1,0 +1,31 @@
+.delivery {
+  padding: 56px 0 74px;
+  background-color: var(--color-light-blue);
+
+  @include tablet {
+    padding: 42px 0 52px;
+  }
+  @include mobile {
+    padding-block: 26px;
+  }
+
+  &__title {
+    color: var(--color-accent);
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 62px;
+
+    @include tablet {
+      font-size: 24px;
+      margin-bottom: 60px;
+    }
+    @include mobile {
+      font-size: 20px;
+      margin-bottom: 46px;
+    }
+  }
+  &__map {
+    border-radius: var(--border-radius);
+  }
+}
