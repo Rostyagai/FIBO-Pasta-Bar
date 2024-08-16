@@ -10,6 +10,26 @@
     <!-- Connect swiperJs -->
     <link rel="stylesheet" href="./libs/swiper-bundle.min.css" />
 
+    <!-- Preload banner images -->
+    <link
+      rel="preload"
+      href="./images/banners/3-min.jpg"
+      as="image"
+      type="image/jpg"
+    />
+    <link
+      rel="preload"
+      href="./images/banners/1-min.jpg"
+      as="image"
+      type="image/jpg"
+    />
+    <link
+      rel="preload"
+      href="./images/banners/2-min.jpg"
+      as="image"
+      type="image/jpg"
+    />
+
     <title>FIBO Pasta Bar</title>
   </head>
   <body>
@@ -62,10 +82,15 @@
               </div>
             </div>
             <address class="header__top-address">
-              <button class="header__top-button button" type="button">
+              <button
+                class="header__top-button button button--gray"
+                type="button"
+              >
                 Заказать звонок
               </button>
-              <a class="header__top-phone header__phone" href="tel:84993918449"
+              <a
+                class="header__top-phone header__phone phone"
+                href="tel:84993918449"
                 >8 499 391-84-49</a
               >
             </address>
@@ -117,7 +142,9 @@
           <button
             class="header__burger-button button visible-tablet"
             id="open-nav-button"
-          ></button>
+          >
+            <p class="visually-hidden">Open navigation menu</p>
+          </button>
         </div>
       </div>
     </header>
@@ -130,6 +157,20 @@
             <div class="swiper-wrapper">
               <div class="banner-slider__slide swiper-slide">
                 <a class="banner-slider__img" href="/">
+                  <p class="visually-hidden">Slide title</p>
+                  <img
+                    src="./images/banners/3-min.jpg"
+                    alt=""
+                    width="540"
+                    height="312"
+                    loading="eager"
+                    fetchpriority="high"
+                  />
+                </a>
+              </div>
+              <div class="banner-slider__slide swiper-slide">
+                <a class="banner-slider__img" href="/">
+                  <p class="visually-hidden">Slide title</p>
                   <img
                     src="./images/banners/3-min.jpg"
                     alt=""
@@ -140,16 +181,7 @@
               </div>
               <div class="banner-slider__slide swiper-slide">
                 <a class="banner-slider__img" href="/">
-                  <img
-                    src="./images/banners/3-min.jpg"
-                    alt=""
-                    width="540"
-                    height="312"
-                  />
-                </a>
-              </div>
-              <div class="banner-slider__slide swiper-slide">
-                <a class="banner-slider__img" href="/">
+                  <p class="visually-hidden">Slide title</p>
                   <img
                     src="./images/banners/1-min.jpg"
                     alt=""
@@ -160,6 +192,7 @@
               </div>
               <div class="banner-slider__slide swiper-slide">
                 <a class="banner-slider__img" href="/">
+                  <p class="visually-hidden">Slide title</p>
                   <img
                     src="./images/banners/2-min.jpg"
                     alt=""
@@ -170,6 +203,7 @@
               </div>
               <div class="banner-slider__slide swiper-slide">
                 <a class="banner-slider__img" href="/">
+                  <p class="visually-hidden">Slide title</p>
                   <img
                     src="./images/banners/3-min.jpg"
                     alt=""
@@ -180,6 +214,7 @@
               </div>
               <div class="banner-slider__slide swiper-slide">
                 <a class="banner-slider__img" href="/">
+                  <p class="visually-hidden">Slide title</p>
                   <img
                     src="./images/banners/3-min.jpg"
                     alt=""
@@ -1119,7 +1154,238 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__background-image background-illustration">
+        <img
+          src="./images/footer-background.svg"
+          alt=""
+          loading="lazy"
+          width="400"
+          height="137"
+        />
+      </div>
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__main">
+            <div class="footer__logo-box">
+              <div class="footer__logo">
+                <img
+                  src="./images/logo.svg"
+                  alt="FIBO Logo"
+                  loading="lazy"
+                  width="90"
+                  height="66"
+                />
+              </div>
+              <div class="visible-mobile footer__contacts-info">
+                <a class="footer__contacts-phone phone" href="tel:+84993918449"
+                  >8 499 391-84-49</a
+                >
+                <button
+                  class="footer__call-button button button--gray"
+                  type="button"
+                >
+                  Заказать звонок
+                </button>
+              </div>
+            </div>
+            <ul class="footer__law-info">
+              <li class="footer__law-item">
+                <a class="footer__title" href="#"> Калорийность и состав </a>
+              </li>
+              <li class="footer__law-item">
+                <a class="footer__title" href="#"> Правовая информация </a>
+              </li>
+            </ul>
+            <div class="footer__soc1als">
+              <h2 class="footer__soc1als-title footer__title">Мы в соцсетях</h2>
+              <ul class="footer__soc1als-list">
+                <li class="footer__soc1als-item">
+                  <a
+                    class="footer__link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    YouTube
+                  </a>
+                </li>
+                <li class="footer__soc1als-item">
+                  <a
+                    class="footer__link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </a>
+                </li>
+
+                <li class="footer__soc1als-item">
+                  <a
+                    class="footer__link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li class="footer__soc1als-item">
+                  <a
+                    class="footer__link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Facebook
+                  </a>
+                </li>
+                <li class="footer__soc1als-item">
+                  <a
+                    class="footer__link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Киев ул. Проспект Вернадского 86В
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__credits hidden-mobile">
+              <div class="footer__copyrights">
+                <p>Alexander Rostyagai © <time datetime="2024">2024</time></p>
+              </div>
+              <div class="footer__payment-badges">
+                <img
+                  src="./images/icons/payment-icons.svg"
+                  alt=""
+                  loading="lazy"
+                  width="178"
+                  height="45"
+                />
+              </div>
+            </div>
+          </div>
+          <aside class="footer__contacts">
+            <div class="footer__contacts-box">
+              <h2
+                class="footer__contacts-title footer__title footer__title--smaller"
+              >
+                Остались вопросы? А мы всегда на связи:
+              </h2>
+              <ul class="footer__contacts-list">
+                <li class="footer__contacts-item">
+                  <a
+                    class="footer__contacts-button button--contact button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="visually-hidden">viber</span>
+                    <svg width="30" height="30">
+                      <use href="./images/icons/icons.svg#icon-viber"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a
+                    class="footer__contacts-button button--contact button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="visually-hidden">Skype</span>
+                    <svg width="30" height="30">
+                      <use href="./images/icons/icons.svg#icon-skype"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a
+                    class="footer__contacts-button button--contact button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="visually-hidden">Messanger</span>
+                    <svg width="30" height="30">
+                      <use href="./images/icons/icons.svg#icon-messanger"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a
+                    class="footer__contacts-button button--contact button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="visually-hidden">Telegram</span>
+                    <svg width="30" height="30">
+                      <use href="./images/icons/icons.svg#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a
+                    class="footer__contacts-button button--contact button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="visually-hidden">Facebook</span>
+                    <svg width="30" height="30">
+                      <use href="./images/icons/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a
+                    class="footer__contacts-button button--contact button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="visually-hidden">wkontakte</span>
+                    <svg width="30" height="30">
+                      <use href="./images/icons/icons.svg#icon-wk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a
+                    class="footer__contacts-button button--contact button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>Написать нам</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="footer__contacts-info hidden-mobile">
+                <a class="footer__contacts-phone phone" href="tel:+84993918449"
+                  >8 499 391-84-49</a
+                >
+                <button
+                  class="footer__call-button button button--gray"
+                  type="button"
+                >
+                  Заказать звонок
+                </button>
+              </div>
+            </div>
+          </aside>
+          <div class="footer__credits visible-mobile">
+            <div class="footer__copyrights">
+              <p>Alexander Rostyagai © <time datetime="2024">2024</time></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <div class="mobile-nav" id="mobile-navigation">
       <div class="container">
         <div class="mobile-nav__inner">
@@ -1161,7 +1427,7 @@
             </ul>
           </nav>
           <a class="mobile-nav__login-button" href="/">Войти</a>
-          <a class="mobile-nav__phone header__phone" href="tel:84993918449">
+          <a class="mobile-nav__phone phone" href="tel:84993918449">
             8 499 391-84-49
           </a>
           <button

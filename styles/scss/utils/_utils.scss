@@ -3,6 +3,16 @@
     display: none !important;
   }
 }
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
 .x-hidden{
   overflow-x: hidden;
 }

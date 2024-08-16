@@ -1,0 +1,10 @@
+.phone {
+  font-weight: 700;
+  font-size: 26px;
+
+  text-transform: uppercase;
+
+  @include hover-underline;
+
+
+}

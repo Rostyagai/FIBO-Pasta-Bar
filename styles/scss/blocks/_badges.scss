@@ -22,7 +22,6 @@
     background-color: var(--badgeCardBackground);
     border-radius: var(--border-radius);
 
-
     @include tablet {
       padding-bottom: 24px;
       max-width: 340px;
@@ -35,10 +34,12 @@
   }
   &__badge {
     @include flex-center;
-    @include square(77px);
     @include abs-center-x;
 
     top: 5px;
+
+    width: 77px !important;
+    height: 77px !important;
 
     padding: 16px;
     border-radius: 50%;
@@ -51,8 +52,8 @@
     color: var(--color-gray-dark-alt-2);
     text-align: center;
 
-    @include mobile{
-        font-size: 12px;
+    @include mobile {
+      font-size: 12px;
     }
   }
 }

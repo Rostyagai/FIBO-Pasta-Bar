@@ -5,8 +5,9 @@
   padding-bottom: var(--header-padding-y);
   z-index: 100;
   transition: var(--transition-duration) background-color;
-  &--background{
+  &--background {
     background-color: var(--color-light);
+    box-shadow: 0 0 20px #00000031;
   }
 
   &__inner {
@@ -99,18 +100,7 @@
     }
 
     &-button {
-      padding: var(--button-padding-y-large) var(--button-padding-x-large);
-      background-color: var(--color-gray);
       color: var(--color-accent);
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 2;
-      border-radius: var(--button-border-radius-large);
-
-      @include hover {
-        color: var(--color-dark-alt);
-        background-color: var(--color-accent);
-      }
 
       @include tablet {
         display: none;
@@ -181,23 +171,17 @@
     width: 18px;
     height: 18px;
   }
-  &__phone {
-    font-weight: 700;
-    font-size: 26px;
-    text-transform: uppercase;
-
-    @include hover-underline;
-  }
   &__burger-button {
     @include square(46px);
-  
+
     @include mobile {
       @include square(39px);
     }
-  
+
     position: relative;
-  
-    &::after, &::before {
+
+    &::after,
+    &::before {
       content: "";
       position: absolute;
       top: 50%;
@@ -209,37 +193,36 @@
       transform-origin: center;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-  
+
     &::after {
       transform: translate(-50%, -50%);
       box-shadow: 0 -11px var(--color-gray-dark), 0 11px var(--color-gray-dark);
     }
-  
+
     &::before {
       transform: translate(-50%, -50%);
     }
-  
+
     &.is-active::after {
       transform: translate(-50%, -50%) rotate(45deg);
       box-shadow: none;
     }
-  
+
     &.is-active::before {
       transform: translate(-50%, -50%) rotate(-45deg);
       box-shadow: none;
     }
   }
-  
+
   &__cart-button {
     --cartButtonBackgroundColor: var(--color-accent);
     --cartButtonTextColor: var(--color-dark-alt);
     --cartButtonBackgroundColorHover: var(--color-dark-alt);
     --cartButtonTextColorHover: var(--color-accent);
 
-    &--light{
+    &--light {
       --cartButtonTextColor: var(--color-dark-alt);
       --cartButtonBackgroundColor: var(--color-light);
-
     }
 
     padding: var(--button-padding-y-extra-large) var(--button-padding-x);
@@ -280,15 +263,16 @@
 
   &.mobile-nav-open {
     background: transparent !important;
+    box-shadow: none !important;
     .header__top-phone {
       color: black;
     }
-    .header__cart-button{
+    .header__cart-button {
       --cartButtonBackgroundColor: var(--color-light);
-    --cartButtonTextColor: var(--color-dark-alt);
-    @include hover{
-      opacity: 0.7;
-    }
+      --cartButtonTextColor: var(--color-dark-alt);
+      @include hover {
+        opacity: 0.7;
+      }
     }
   }
 }

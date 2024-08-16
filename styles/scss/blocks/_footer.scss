@@ -1,0 +1,208 @@
+.footer {
+  position: relative;
+  padding: 80px 0 60px;
+
+  --logoWidth: 90px;
+  --logoHeight: 67px;
+
+  @include mobile {
+    --logoWidth: 72px;
+    --logoHeight: 50px;
+
+    padding: 30px 0 0px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    @include mobile {
+      gap: 25px;
+    }
+  }
+  &__main {
+    --itemMarginBottom: 15px;
+  }
+  &__logo-box {
+    @include mobile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 18px;
+    }
+  }
+  &__logo {
+    width: var(--logoWidth);
+    height: var(--logoHeight);
+    margin-bottom: var(--itemMarginBottom);
+  }
+  &__link {
+    color: var(--color-gray-dark);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+
+    @include hover-underline;
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 100%;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.75;
+
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+
+  &__law-info {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    margin-bottom: var(--itemMarginBottom);
+
+    @include mobile {
+      column-gap: 15px;
+      justify-content: space-between;
+    }
+  }
+  &__soc1als {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--itemMarginBottom);
+    margin-bottom: 45px;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      @include mobile {
+        row-gap: 13px;
+      }
+    }
+    &-item {
+      &:last-child {
+        grid-row: 1 / 3;
+        grid-column: 3 / 4;
+      }
+    }
+    &-title {
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+  &__credits {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  &__copyrights {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 200%;
+    color: var(--color-gray-dark);
+
+    @include mobile{
+      font-size: 10px;
+    }
+  }
+  &__payment-badges {
+    width: 177px;
+    height: 45px;
+  }
+
+  &__contacts {
+    &-title {
+      margin-bottom: 32px;
+
+      @include mobile {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 46px;
+
+      @include mobile {
+        gap: 12px;
+        grid-template-columns: repeat(6, 1fr);
+        margin-bottom: 0;
+      }
+    }
+    &-item {
+      &:last-child {
+        grid-column: 3 / 5;
+
+        @include mobile {
+          grid-column: 1 / 7;
+          & > .button {
+            padding: 12px;
+          }
+        }
+      }
+    }
+    &-button {
+      height: 100%;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      @include tablet {
+        flex-direction: row;
+      }
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 5px;
+      }
+    }
+    &-phone {
+      font-size: 30px;
+      color: var(--color-accent);
+
+      @include mobile {
+        font-size: 21px;
+      }
+    }
+  }
+
+  &__background-image {
+    width: 400px;
+    height: 137px;
+    right: 0;
+    bottom: 0;
+
+    @include desktop {
+      width: 207px;
+      height: 69px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+}

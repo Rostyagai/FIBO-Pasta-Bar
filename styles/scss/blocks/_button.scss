@@ -1,5 +1,48 @@
-.button{
-    @include reset-button;
-    @include flex-center;
-    cursor: pointer;
+.button {
+  @include reset-button;
+  @include flex-center;
+  cursor: pointer;
+
+  &--gray {
+    padding: var(--button-padding-y-large) var(--button-padding-x-large);
+    background-color: var(--color-gray);
+    color: var(--color-gray-dark-alt-2);
+    font-weight: 700;
+    @include fluid-text(14, 10);
+    line-height: 2;
+    border-radius: var(--button-border-radius-large);
+
+    @include hover {
+      color: var(--color-dark-alt);
+      background-color: var(--color-accent);
+    }
+
+    @include mobile {
+      padding: var(--button-padding-y-mobile) var(--button-padding-x-mobile);
+      line-height: 2.8;
+    }
+  }
+  &--contact {
+    padding: var(--button-socials-padding-y) var(--button-socials-padding-x);
+    border: 2px solid var(--color-light-blue);
+    border-radius: var(--border-radius);
+
+    font-weight: 700;
+
+    color: var(--color-dark-alt-2);
+
+    @include hover {
+      background-color: var(--color-light-blue);
+    }
+
+    @include mobile {
+      border-radius: var(--border-radius-small);
+      padding: 8px;
+
+      & > svg{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 }
