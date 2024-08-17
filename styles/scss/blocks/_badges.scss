@@ -1,7 +1,7 @@
 .badges {
   --badgeCardBackground: var(--color-light);
   display: grid;
-  align-items: start;
+  align-items: stretch;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
   margin-bottom: 32px;
