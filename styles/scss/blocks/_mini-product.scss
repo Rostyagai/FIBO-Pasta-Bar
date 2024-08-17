@@ -5,11 +5,20 @@
     align-items: center;
     column-gap: 23px;
   }
-  @include mobile{
+  @include mobile {
     grid-template-columns: auto 2fr;
   }
   &__image {
+    display: block;
     margin-bottom: 8px;
+
+    & > img {
+      transition: var(--transition-duration) scale;
+      @include hover {
+        scale: 0.9;
+      }
+    }
+
     @include tablet {
       @include square(122px);
       margin: 0;
@@ -26,9 +35,9 @@
     color: var(--color-gray-dark-alt);
     margin-bottom: 14px;
 
-    @include mobile{
-        margin-bottom: 2px;
-        line-height: 2;
+    @include mobile {
+      margin-bottom: 2px;
+      line-height: 2;
     }
   }
   &__descr {
