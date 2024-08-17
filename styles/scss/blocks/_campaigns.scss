@@ -81,25 +81,12 @@
     }
   }
   &__button {
-    font-weight: 700;
     font-size: 14px;
     line-height: 200%;
-    color: var(--color-light);
-
-    background-color: var(--color-accent);
-    border-radius: var(--button-border-radius-large);
+   
     padding: var(--button-padding-y-extra-large) var(--button-padding-x-large);
 
     margin: 0 auto;
-
-    @include hover {
-      color: var(--color-accent);
-      background-color: var(--color-dark-alt-2);
-    }
-
-    @include tablet {
-      color: var(--color-dark-alt);
-    }
 
     @include mobile {
       font-size: 10px;

@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Fibo Pasta Bar – уютное место для ценителей итальянской кухни. У нас готовят вкусную пиццу и пасту с использованием свежих ингредиентов и традиционных рецептов. Наслаждайтесь аутентичными блюдами и приятной атмосферой в самом центре города.">
+    <meta
+      name="description"
+      content="Fibo Pasta Bar – уютное место для ценителей итальянской кухни. У нас готовят вкусную пиццу и пасту с использованием свежих ингредиентов и традиционных рецептов. Наслаждайтесь аутентичными блюдами и приятной атмосферой в самом центре города."
+    />
 
     <!-- Connect main styles -->
     <link rel="stylesheet" href="./styles/css/main.min.css" />
@@ -92,8 +95,9 @@
               <a
                 class="header__top-phone header__phone phone"
                 href="tel:84993918449"
-                >8 499 391-84-49</a
               >
+                8 499 391-84-49
+              </a>
             </address>
           </div>
           <div class="header__bottom">
@@ -135,8 +139,11 @@
               </ul>
               <a class="header__login-button" href="/">Войти</a>
             </div>
-            <button class="header__cart-button button" type="button">
-              <span class="header__cart-button-text">Корзина</span>
+            <button
+              class="header__cart-button button button--accent"
+              type="button"
+            >
+              <span class="button__text">Корзина</span>
               <span class="header__cart-button-count">1</span>
             </button>
           </div>
@@ -149,6 +156,61 @@
         </div>
       </div>
     </header>
+    <div class="mobile-nav" id="mobile-navigation">
+      <div class="container">
+        <div class="mobile-nav__inner">
+          <nav class="mobile-nav__nav">
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Пицца</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Паста</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Супы</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Салаты</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Напитки</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Десерты</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Бакалея</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Антипасты</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Акции</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Комбо</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="mobile-nav__login-button" href="/">Войти</a>
+          <a class="mobile-nav__phone phone" href="tel:84993918449">
+            8 499 391-84-49
+          </a>
+          <button
+            class="mobile-nav__cart-button button button--light"
+            type="button"
+          >
+            <span class="button__text">Корзина</span>
+            <span class="header__cart-button-count">1</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <main>
       <h1 class="visually-hidden">FIBO Pasta Bar -  Главная</h1>
       <section class="banner-section x-hidden">
@@ -177,6 +239,8 @@
                     alt=""
                     width="540"
                     height="312"
+                    loading="eager"
+                    fetchpriority="high"
                   />
                 </a>
               </div>
@@ -415,7 +479,7 @@
 
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -445,7 +509,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -475,7 +539,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -505,7 +569,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -535,7 +599,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -565,7 +629,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -595,7 +659,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -625,7 +689,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -660,7 +724,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -690,7 +754,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -720,7 +784,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -750,7 +814,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -780,7 +844,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -810,7 +874,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -840,7 +904,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -870,7 +934,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -905,7 +969,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -935,7 +999,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -965,7 +1029,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -995,7 +1059,7 @@
                     </div>
                     <footer class="mini-product__footer">
                       <p class="mini-product__price">от 600грн</p>
-                      <button class="mini-product__cart-button button">
+                      <button class="mini-product__cart-button button button--add-to-cart">
                         В корзину
                       </button>
                     </footer>
@@ -1077,7 +1141,7 @@
               </a>
             </li>
           </ul>
-          <button class="campaigns__button button">Все акции</button>
+          <button class="campaigns__button button button--accent button--rounded">Все акции</button>
         </div>
       </section>
       <section class="delivery">
@@ -1155,6 +1219,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="footer__background-image background-illustration">
         <img
@@ -1387,60 +1452,7 @@
         </div>
       </div>
     </footer>
-    <div class="mobile-nav" id="mobile-navigation">
-      <div class="container">
-        <div class="mobile-nav__inner">
-          <nav class="mobile-nav__nav">
-            <ul class="mobile-nav__list">
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Пицца</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Паста</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Супы</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Салаты</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Напитки</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Десерты</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Бакалея</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Антипасты</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Акции</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Комбо</a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="/">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <a class="mobile-nav__login-button" href="/">Войти</a>
-          <a class="mobile-nav__phone phone" href="tel:84993918449">
-            8 499 391-84-49
-          </a>
-          <button
-            class="mobile-nav__cart-button header__cart-button header__cart-button--light button"
-            type="button"
-          >
-            <span class="header__cart-button-text">Корзина</span>
-            <span class="header__cart-button-count">1</span>
-          </button>
-        </div>
-      </div>
-    </div>
+
     <script src="./js/fixed-header.js" defer></script>
     <script src="./js/mobile-nav.js" defer></script>
     <script src="./libs/swiper-bundle.min.js" defer></script>

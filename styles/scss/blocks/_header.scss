@@ -100,7 +100,7 @@
     }
 
     &-button {
-      color: var(--color-accent);
+      --ButtonTextColor: var(--color-accent);
 
       @include tablet {
         display: none;
@@ -211,41 +211,6 @@
     &.is-active::before {
       transform: translate(-50%, -50%) rotate(-45deg);
       box-shadow: none;
-    }
-  }
-
-  &__cart-button {
-    --cartButtonBackgroundColor: var(--color-accent);
-    --cartButtonTextColor: var(--color-dark-alt);
-    --cartButtonBackgroundColorHover: var(--color-dark-alt);
-    --cartButtonTextColorHover: var(--color-accent);
-
-    &--light {
-      --cartButtonTextColor: var(--color-dark-alt);
-      --cartButtonBackgroundColor: var(--color-light);
-    }
-
-    padding: var(--button-padding-y-extra-large) var(--button-padding-x);
-    background-color: var(--cartButtonBackgroundColor);
-    color: var(--cartButtonTextColor);
-    border-radius: var(--button-border-radius);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.44;
-
-    @include hover {
-      --cartButtonTextColor: var(--cartButtonTextColorHover);
-      --cartButtonBackgroundColor: var(--cartButtonBackgroundColorHover);
-    }
-
-    @include desktop {
-      font-size: 14px;
-    }
-
-    &-text {
-      border-right: solid 2px var(--cartButtonTextColor);
-      padding-right: 14px;
-      margin-right: 14px;
     }
   }
   &__login-button {

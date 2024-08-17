@@ -60,18 +60,4 @@
     line-height: 86%;
     color: var(--color-dark-alt);
   }
-  &__cart-button {
-    padding: var(--button-padding-y) var(--button-padding-x);
-    border-radius: var(--button-border-radius);
-    background-color: var(--color-accent);
-
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 200%;
-    color: var(--color-light);
-
-    @include hover {
-      color: var(--color-gray-dark-alt-2);
-    }
-  }
 }
