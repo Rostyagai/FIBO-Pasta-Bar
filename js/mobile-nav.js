@@ -3,10 +3,17 @@ const header = document.getElementById("header-main");
 
 const navOpenButton = document.getElementById("open-nav-button");
 
+let navigationCloseTimeout;
+
 navOpenButton.addEventListener("click", () => {
+if(navigationCloseTimeout){
+  clearTimeout(navigationCloseTimeout);
+  navigationCloseTimeout = null;
+}
+
   if (mobileNav.classList.contains("open")) {
     document.body.style.overflow = 'auto';
-    setTimeout(() => {
+    navigationCloseTimeout = setTimeout(() => {
       mobileNav.style.visibility = "hidden";
     }, 700);
   } else {
