@@ -10,18 +10,21 @@ const bannerSlider = new Swiper(".banner-slider", {
       spaceBetween: 12,
       slidesPerGroup: 1,
       initialSlide: 2,
+      loop: true,
     },
     764: {
       slidesPerView: 2,
       spaceBetween: 20,
       slidesPerGroup: 2,
       initialSlide: 3,
+      loop: false,
     },
     1280:{
       spaceBetween: 30,
       slidesPerView: 2,
       slidesPerGroup: 2,
       initialSlide: 3,
+      loop: false,
     }
   },
   autoplay: {
