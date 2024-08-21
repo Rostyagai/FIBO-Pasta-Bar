@@ -80,6 +80,14 @@
       type="image/jpg"
     />
 
+    <!-- Preload background illustration (first) -->
+    <link
+    rel="preload"
+    href="./images/background-illustration-1.webp"
+    as="image"
+    type="image/webp"
+  />
+
     <title>FIBO Pasta Bar</title>
   </head>
   <body>
@@ -362,6 +370,8 @@
             alt=""
             width="148"
             height="445"
+            fetchpriority="high"
+            loading="eager"
           />
         </div>
         <div class="container">
